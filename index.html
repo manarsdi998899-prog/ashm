@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>موقع المبادرة</title>
+<style>
+  body { font-family: Tahoma, Arial, sans-serif; background: #f4f6f8; margin:0; padding:0; }
+  header { background:#1E90FF; color:white; text-align:center; padding:20px; font-size:24px; }
+  section { padding:20px; max-width:900px; margin:auto; background:white; margin-bottom:20px; border-radius:10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+  h2 { text-align:center; color:#333; }
+  ul { list-style: none; padding:0; }
+  li { padding:8px 0; }
+  a { text-decoration:none; color:#1E90FF; }
+  iframe { width:100%; border:none; }
+  .accordion { background-color:#eee; cursor:pointer; padding:15px; width:100%; border:none; text-align:right; outline:none; font-size:18px; transition:0.4s; border-radius:5px; margin-bottom:5px; }
+  .active, .accordion:hover { background-color:#ccc; }
+  .panel { padding:0 15px; display:none; background-color:white; overflow:hidden; border-radius:5px; margin-bottom:10px; }
+</style>
+</head>
+<body>
+
+<header>موقع مبادرة عشم باكر</header>
+
+<section>
+<h2>قوائم المبادرة</h2>
+
+<button class="accordion">الجمعية العمومية</button>
+<div class="panel">
+  <ul>
+    <li>عضو 1</li>
+    <li>عضو 2</li>
+    <li>عضو 3</li>
+    <li>عضو 4</li>
+    <li>عضو 5</li>
+  </ul>
+</div>
+
+<button class="accordion">المكتب التنفيذي</button>
+<div class="panel">
+  <ul>
+    <li>رئيس</li>
+    <li>نائب الرئيس</li>
+    <li>الأمين العام</li>
+    <li>أعضاء المكتب التنفيذي</li>
+  </ul>
+</div>
+
+<button class="accordion">ورش تدريبية والتسجيل</button>
+<div class="panel">
+  <ul>
+    <li>ورشة الإسعافات الأولية - <a href="https://docs.google.com/forms/d/e/1FAIpQLSeusygs7M3aoMaTI1yA7y7wpBaGFQh-7Q2xW8HJChEAG1OKeg/viewform?embedded=true" target="_blank">التسجيل هنا</a></li>
+    <li>ورشة التطوع المجتمعي - <a href="#" target="_blank">التسجيل هنا</a></li>
+    <li>ورشة إدارة المبادرات - <a href="#" target="_blank">التسجيل هنا</a></li>
+  </ul>
+</div>
+
+<button class="accordion">كااوي / التواصل</button>
+<div class="panel">
+  <p>للتواصل مع فريق المبادرة:</p>
+  <ul>
+    <li>البريد الإلكتروني: info@ashmbakr.org</li>
+    <li>الهاتف: 0123456789</li>
+    <li>موقع Google Form للتسجيل: 
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeusygs7M3aoMaTI1yA7y7wpBaGFQh-7Q2xW8HJChEAG1OKeg/viewform?embedded=true" height="2339"></iframe>
+    </li>
+  </ul>
+</div>
+
+</section>
+
+<script>
+  const acc = document.getElementsByClassName("accordion");
+  for(let i=0; i<acc.length; i++){
+    acc[i].addEventListener("click", function(){
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      if(panel.style.display === "block"){
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
